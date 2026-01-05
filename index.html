@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jerry Ngo - Software Engineer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Floating tech icons background -->
+  <div class="floating-icons">
+    <div class="tech-icon" style="top: 10%; left: 10%; animation-delay: 0s;">&lt;/&gt;</div>
+    <div class="tech-icon" style="top: 20%; right: 15%; animation-delay: 2s;">{ }</div>
+    <div class="tech-icon" style="top: 60%; left: 8%; animation-delay: 4s;">[ ]</div>
+    <div class="tech-icon" style="top: 70%; right: 10%; animation-delay: 1s;">=&gt;</div>
+    <div class="tech-icon" style="top: 40%; left: 5%; animation-delay: 3s;">( )</div>
+    <div class="tech-icon" style="top: 80%; right: 20%; animation-delay: 5s;">$</div>
+  </div>
+
+  <!-- Matrix rain effect -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Scan line element -->
+  <div class="scan-line"></div>
+
+  <!-- Wrap all sections in scroll container for snap scrolling -->
+  <div class="scroll-container">
+    <!-- Hero Section -->
+    <section class="snap-section hero">
+      <div class="section-content">
+        <div class="terminal-header">
+          <span class="terminal-prompt">~/jerry-ngo</span>
+          <span class="terminal-command">$ whoami</span>
+        </div>
+        <h1 class="typing-text">
+          <span id="typed-name"></span>
+          <span class="cursor">|</span>
+        </h1>
+        <p class="subtitle">Senior DevOps / Site Reliability Engineer</p>
+        <p class="tagline">I build reliable cloud platforms on AWS and help teams ship safely at scale.</p>
+        
+        <!-- Contact Icons -->
+        <div class="contact-icons">
+          <a href="mailto:huyngogia1997@gmail.com" class="contact-card" title="Email">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+          <a href="tel:+84589052153" class="contact-card" title="Phone">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/huy-jerry-ngo-4625b4208/" target="_blank" rel="noopener noreferrer" class="contact-card" title="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="cv.html" class="contact-card" title="CV">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="snap-section">
+      <div class="section-content">
+        <div class="terminal-header">
+          <span class="terminal-prompt">~/about</span>
+          <span class="terminal-command">$ cat README.md</span>
+        </div>
+        <div class="card">
+          <h2 class="section-title">About Me</h2>
+          <p class="text-content">
+            DevOps/SRE with 3 years experience maintaining system architecture and achieving 99.99% SLO. 
+            Focused on system design, reliability, and continuous improvement.
+          </p>
+          <p class="text-content" style="margin-top: 1rem;">
+            For me, system design is only the start — real value comes from tracking production behavior, learning from incidents, 
+            and continuously improving availability, performance, and cost.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section class="snap-section">
+      <div class="section-content">
+        <div class="terminal-header">
+          <span class="terminal-prompt">~/expertise</span>
+          <span class="terminal-command">$ cat capabilities.md</span>
+        </div>
+        <div class="card">
+          <h2 class="section-title">What I Do</h2>
+          <div class="expertise-grid">
+            <div class="expertise-item">
+              <h3>Reliability & SLO-driven operations</h3>
+              <p class="text-content">Define SLOs/SLIs, on-call support, incident response, postmortems, DR automation</p>
+            </div>
+            <div class="expertise-item">
+              <h3>Platform Engineering on AWS</h3>
+              <p class="text-content">ECS, EC2, RDS, Lambda, DynamoDB, API Gateway, S3, CloudFront, multi-tenant Landing Zone with cross-region automation</p>
+            </div>
+            <div class="expertise-item">
+              <h3>Observability at scale (Datadog)</h3>
+              <p class="text-content">Platform patterns for effortless monitoring, standardized agent rollout, streaming optimization</p>
+            </div>
+            <div class="expertise-item">
+              <h3>Kafka / MSK</h3>
+              <p class="text-content">Design and operate Self-managed Kafka & MSK for high availability, day-2 operations tooling</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Impact Section -->
+    <section class="snap-section">
+      <div class="section-content">
+        <div class="terminal-header">
+          <span class="terminal-prompt">~/impact</span>
+          <span class="terminal-command">$ grep -r "achievements"</span>
+        </div>
+        <div class="card">
+          <h2 class="section-title">Featured Impact</h2>
+          <div class="impact-list">
+            <div class="impact-item">
+              <span class="impact-metric">99.99%</span>
+              <span class="impact-desc">HA SLO for Kafka/MSK with 100% data reliability</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-metric">100%</span>
+              <span class="impact-desc">Services monitored via Datadog platform</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-metric">70%+</span>
+              <span class="impact-desc">Reduction in Datadog log streaming costs</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-metric">95%</span>
+              <span class="impact-desc">Services following automated deployment standards</span>
+            </div>
+            <div class="impact-item">
+              <span class="impact-metric">AI-driven</span>
+              <span class="impact-desc">Led GitLab → GitHub migration, creating repeatable workflows and reducing repo-by-repo migration effort</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="snap-section">
+      <div class="section-content">
+        <div class="terminal-header">
+          <span class="terminal-prompt">~/toolbox</span>
+          <span class="terminal-command">$ ls -la</span>
+        </div>
+        <div class="card">
+          <h2 class="section-title">Tech Stack</h2>
+          <div class="tech-grid">
+            <!-- Updated tech stack icons with new blob URLs -->
+            <div class="tech-item">
+              <div class="code-snippet">AWS</div>
+            </div>
+            <div class="tech-item">
+              <div class="code-snippet">Kubernetes</div>
+            </div>
+            <div class="tech-item">
+              <div class="code-snippet">Datadog</div>
+            </div>
+            <div class="tech-item">
+              <div class="code-snippet">Terraform</div>
+            </div>
+            <div class="tech-item">
+              <div class="code-snippet">Docker</div>
+            </div>
+            <div class="tech-item">
+              <div class="code-snippet">Kafka</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="snap-section">
+      <div class="section-content">
+        <div class="terminal-header">
+          <span class="terminal-prompt">~/certifications</span>
+          <span class="terminal-command">$ cat badges.json</span>
+        </div>
+        <div class="card">
+          <h2 class="section-title">Certifications & Awards</h2>
+          
+          <!-- Redesigned awards section layout -->
+          <div class="awards-section">
+            <h3 class="subsection-title">Awards</h3>
+            <div class="award-card">
+              <div class="award-content">
+                <h4>Rising Star Award (Top 5)</h4>
+                <span class="award-year">⭐ 2023</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Redesigned certifications with proper badge images -->
+          <div class="certifications-section">
+            <h3 class="subsection-title">Certifications</h3>
+            <div class="cert-cards">
+              <a href="https://www.credly.com/badges/9644abbc-ca17-4a92-94f9-87fcb1e55e49/public_url" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="cert-card">
+                <div class="cert-content">
+                  <h4>AWS Certified Developer – Associate</h4>
+                </div>
+              </a>
+              <a href="https://www.credly.com/badges/653e2469-8380-445f-922f-712fe14c22ff/public_url" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="cert-card">
+                <div class="cert-content">
+                  <h4>AWS Certified DevOps Engineer – Professional</h4>
+                </div>
+              </a>
+              <a href="https://www.credly.com/badges/6d330bb9-c103-4c34-9634-33c5bfca83f5/public_url" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="cert-card">
+                <div class="cert-content">
+                  <h4>CKAD: Certified Kubernetes Application Developer</h4>
+                </div>
+              </a>
+              <a href="https://www.credly.com/badges/ccaf5b26-e007-444a-a49f-41779e66cdc8/public_url" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="cert-card">
+                <div class="cert-content">
+                  <h4>Datadog Certified: Log Management Fundamentals</h4>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="snap-section">
+      <div class="section-content">
+        <div class="terminal-header">
+          <span class="terminal-prompt">~/contact</span>
+          <span class="terminal-command">$ echo "Let's connect"</span>
+        </div>
+        <div class="card">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="text-content" style="margin-bottom: 1.5rem;">
+            Open to Site Reliability Engineer / DevOps Engineer roles. If you're building systems that need to be reliable, 
+            observable, and continuously improved — let's connect.
+          </p>
+          <!-- Made contact info clickable with proper links -->
+          <div class="contact-info">
+            <a href="mailto:huyngogia1997@gmail.com" class="contact-item-link">
+              <div class="contact-item">
+                <span class="contact-label">Email:</span>
+                <span class="contact-value">huyngogia1997@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+84589052153" class="contact-item-link">
+              <div class="contact-item">
+                <span class="contact-label">Phone:</span>
+                <span class="contact-value">+84589052153</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/huy-jerry-ngo-4625b4208/" target="_blank" rel="noopener noreferrer" class="contact-item-link">
+              <div class="contact-item">
+                <span class="contact-label">LinkedIn:</span>
+                <span class="contact-value">huy-jerry-ngo</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

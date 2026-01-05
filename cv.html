@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Ngô Gia Huy</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      overflow: hidden;
+      height: 100vh;
+    }
+    
+    .cv-scroll-container {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+    
+    .cv-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      scroll-snap-align: start;
+    }
+    
+    .cv-header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid rgba(213, 195, 173, 0.3);
+    }
+    
+    .cv-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #d5c3ad;
+      margin-bottom: 8px;
+    }
+    
+    .cv-title {
+      font-size: 1.25rem;
+      color: #8fa88e;
+      margin-bottom: 16px;
+    }
+    
+    .cv-info {
+      font-size: 0.9rem;
+      color: rgba(213, 195, 173, 0.8);
+      line-height: 1.6;
+    }
+    
+    .cv-section {
+      margin-bottom: 32px;
+    }
+    
+    .cv-section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #d5c3ad;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(213, 195, 173, 0.2);
+    }
+    
+    .cv-content {
+      color: rgba(213, 195, 173, 0.9);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+    
+    .cv-item {
+      margin-bottom: 24px;
+    }
+    
+    .cv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    
+    .cv-item-title {
+      font-weight: 600;
+      color: #8fa88e;
+      font-size: 1.1rem;
+    }
+    
+    .cv-item-date {
+      color: rgba(213, 195, 173, 0.6);
+      font-size: 0.9rem;
+    }
+    
+    .cv-item-subtitle {
+      color: rgba(213, 195, 173, 0.7);
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    
+    .cv-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .cv-list li {
+      margin-bottom: 6px;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .cv-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #8fa88e;
+    }
+    
+    .back-button {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 10px 20px;
+      background: rgba(213, 195, 173, 0.1);
+      color: #d5c3ad;
+      text-decoration: none;
+      border-radius: 4px;
+      border: 1px solid rgba(213, 195, 173, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .back-button:hover {
+      background: rgba(213, 195, 173, 0.2);
+      transform: translateX(-4px);
+    }
+    
+    /* Added download button styling */
+    .download-button {
+      display: inline-block;
+      margin: 20px 10px;
+      padding: 12px 24px;
+      background: rgba(123, 165, 145, 0.2);
+      color: #8fa88e;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 2px solid #8fa88e;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .download-button:hover {
+      background: #8fa88e;
+      color: #1a1a1a;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(123, 165, 145, 0.4);
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    
+    .cert-item, .award-item {
+      margin-bottom: 8px;
+      color: rgba(213, 195, 173, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-scroll-container">
+    <div class="cv-container">
+      <!-- Added button group with back and download buttons -->
+      <div class="button-group">
+        <a href="index.html" class="back-button">← Back to Home</a>
+        <!-- Updated to direct download from GitHub repo -->
+        <a href="https://raw.githubusercontent.com/huyngogia1997/jerry-ngo-cv/master/Ngo-Gia-Huy.pdf" download="Ngo-Gia-Huy-CV.pdf" class="download-button">📄 Download CV</a>
+      </div>
+      
+      <div class="cv-header">
+        <h1 class="cv-name">Ngô Gia Huy</h1>
+        <div class="cv-title">Senior DevOps/SRE</div>
+        <div class="cv-info">
+          <div>DOB: 15/01/1997 | Gender: Male</div>
+          <div>Phone: +84 589052153 | Email: huyngogia1997@gmail.com</div>
+          <div>Address: 619 Đỗ Xuân Hợp, Phước Long B, District 9, HCM City</div>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <h2 class="cv-section-title">Objective</h2>
+        <div class="cv-content">
+          With 3 years of experience as a DevOps/SRE and 2 years as a Fullstack Developer, I am adept at collaborating with feature teams and maintaining a comprehensive view of system architecture. Currently seeking a role as a Site Reliability Engineer/DevOps Engineer, where I can focus on enhancing system design and establishing processes to ensure continuous operation and system improvement. For me, designing a system is just the first step; tracking and enhancing the system is where the true value lies.
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <h2 class="cv-section-title">Honors & Awards</h2>
+        <div class="award-item">2023 • Achieve the "Rising Star" (Top 5) Award of the year</div>
+      </div>
+
+      <div class="cv-section">
+        <h2 class="cv-section-title">Certifications</h2>
+        <div class="cv-content">
+          <div style="margin-bottom: 16px;">
+            <strong>2023</strong>
+            <div class="cert-item">• AWS Certified DevOps Engineer – Professional</div>
+            <div class="cert-item">• Datadog Certified: Log Management Fundament</div>
+            <div class="cert-item">• Certified Kubernetes Application Developer</div>
+          </div>
+          <div>
+            <strong>2022</strong>
+            <div class="cert-item">• AWS Certified Developer – Associate</div>
+            <div class="cert-item">• Datadog Certified: Datadog Fundamentals</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <h2 class="cv-section-title">Experience</h2>
+        
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <div class="cv-item-title">Datump Consulting Company (Onsite for Tyme Group)</div>
+            <div class="cv-item-date">07/2021 - Current</div>
+          </div>
+          <div class="cv-item-subtitle">Cloud DevOps & Site Reliability Engineer</div>
+          <ul class="cv-list">
+            <li>Designing/Deciding/Optimizing/Maintaining/Improving the Self Managed Kafka/MSK system (achieving 99.99% High Availability SLO and 100% data reliability)</li>
+            <li>Designing/Maintaining the central backup for AWS organization (ensuring full compliance with banking backup standards for South Africa and the Philippines)</li>
+            <li>Designing/Deciding/Optimizing/Maintaining Platform Products including S3 virus scanning tools, start/stop stack, DevOps tools, Kafka tools, Internal CA, and self-hosted N8n</li>
+            <li>Implementing the Landing Zone in multi-tenant account (cross-region, cross accounts)</li>
+            <li>Deploy on-demand AWS resources: ECS, EC2, RDS, CloudFront, S3, Lambda, DynamoDB and API Gateway</li>
+            <li>Setup network cross account: DNS, Route53, Private Link/VPC Peering/Transit GW via Pipeline using CloudFormation and Terraform</li>
+            <li>Design and execute DR Automation for the system</li>
+            <li>Built platform product using Datadog enabling 100% services to be monitored without effort from service teams</li>
+            <li>Automated Datadog deployment mechanism with 95% services following common standards</li>
+            <li>Designed/implemented streaming mechanism for Logs/Trace/Event/Metrics on private network</li>
+            <li>Investigated/Optimized Datadog costs achieving more than 70% reduction in streaming log costs</li>
+            <li>Incident on-call support and training (Kafka 101, Datadog 101)</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <div class="cv-item-title">Clik Company</div>
+            <div class="cv-item-date">08/2020 - 07/2021</div>
+          </div>
+          <div class="cv-item-subtitle">Java Fullstack Developer</div>
+          <ul class="cv-list">
+            <li>Developed and maintained a furniture production application and website using Spring Boot, React Native, and React JS</li>
+            <li>Implemented Staff Chatbot (In-house service)</li>
+          </ul>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <div class="cv-item-title">Splus Company</div>
+            <div class="cv-item-date">02/2018 - 12/2018</div>
+          </div>
+          <div class="cv-item-subtitle">Backend Developer - Booking Application (Curricular Internship)</div>
+          <ul class="cv-list">
+            <li>Maintained and developed new features for booking application</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <h2 class="cv-section-title">Education</h2>
+        <div class="cv-item">
+          <div class="cv-item-header">
+            <div class="cv-item-title">FPT University</div>
+            <div class="cv-item-date">10/2016 - 03/2020</div>
+          </div>
+          <div class="cv-item-subtitle">Major: Software Engineering</div>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <h2 class="cv-section-title">Interests</h2>
+        <div class="cv-content">Travel, Food, Esport, Anime, and Coffee</div>
+      </div>
+
+      <!-- Added download button at the bottom too -->
+      <div class="button-group">
+        <a href="index.html" class="back-button">← Back to Home</a>
+        <!-- Updated to direct download from GitHub repo -->
+        <a href="https://raw.githubusercontent.com/huyngogia1997/jerry-ngo-cv/master/Ngo-Gia-Huy.pdf" download="Ngo-Gia-Huy-CV.pdf" class="download-button">📄 Download CV</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
